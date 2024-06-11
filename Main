@@ -1,0 +1,33 @@
+public class Main {
+    public static void main(String[] args) {
+        Parqueadero parqueadero = new Parqueadero(10.0);
+
+        // Ingresar algunos carros
+        parqueadero.ingresarCarro("ABC123", 7);
+        parqueadero.ingresarCarro("PBX456", 8);
+        parqueadero.ingresarCarro("PB789", 9);
+
+        // Consultar puestos disponibles
+        System.out.println("Puestos disponibles: " + parqueadero.consultarPuestosDisponibles());
+
+        // Avanzar el reloj
+        parqueadero.avanzarReloj(3);
+
+        // Consultar carros parqueados más de 3 horas
+        ArrayList<Carro> carrosMasDeTresHoras = parqueadero.darCarrosMasDeTresHorasParqueados();
+        System.out.println("Carros parqueados más de 3 horas: " + carrosMasDeTresHoras.size());
+
+        // Dar salida a un carro
+        parqueadero.darSalidaCarro("ABC123");
+        System.out.println("Ingresos: " + parqueadero.darIngresos());
+
+        // Consultar puestos disponibles
+        System.out.println("Puestos disponibles: " + parqueadero.consultarPuestosDisponibles());
+
+        // Consultar tiempo promedio
+        System.out.println("Tiempo promedio: " + parqueadero.darTiempoPromedio());
+
+        // Metodo1
+        System.out.println(parqueadero.metodo1());
+
+        // Desocupar parqueadero
